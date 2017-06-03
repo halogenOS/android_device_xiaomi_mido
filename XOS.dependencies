@@ -1,0 +1,17 @@
+[
+  {
+   "repository" : "android_kernel_xiaomi_msm8953",
+   "target_path": "kernel/xiaomi/msm8953",
+   "branch": "XOS-7.1"
+  },
+  {
+    "repository": "android_vendor_xiaomi_mido",
+    "target_path": "vendor/xiaomi/mido",
+    "branch": "XOS-7.1"
+  },
+  {
+    "repository": "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch": "cm-14.1"
+  }
+]
