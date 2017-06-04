@@ -28,3 +28,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="xiaomi/mido/mido:6.0.1/MMB29M/V8.2.4.0.MCFMIDL:user/release-keys" \
     PRIVATE_BUILD_DESC="mido-user 6.0.1 MMB29M V8.2.4.0.MCFMIDL release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.ota.romname=$(PRODUCT_NAME) \
+    persist.ota.version=$(shell date +%Y%m%d) \
+    persist.ota.manifest=https://raw.githubusercontent.com/halogenOS/android_extras_ota/XOS-7.1/$(PRODUCT_NAME).xml
