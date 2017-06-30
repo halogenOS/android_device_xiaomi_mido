@@ -16,7 +16,7 @@
 
 package org.cyanogenmod.hardware;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import org.halogenos.io.FileUtils;
 
 /*
  * Disable capacitive keys
@@ -40,7 +40,7 @@ public class KeyDisabler {
     }
 
     public static boolean setActive(boolean state) {
-        return FileUtils.writeLine(CONTROL_PATH, state ? "0" : "1");
+        return FileUtils.writeString(CONTROL_PATH, (state ? "0" : "1"));
     }
 
 }
