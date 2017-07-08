@@ -18,6 +18,8 @@ package org.cyanogenmod.hardware;
 
 import org.halogenos.io.FileUtils;
 
+import java.io.File;
+
 /**
  * Glove mode / high touch sensitivity
  */
@@ -29,7 +31,7 @@ public class HighTouchSensitivity {
     }
 
     public static boolean isEnabled() {
-        return FileUtils.readOneLine(CONTROL_PATH).equals("1");
+        return FileUtils.readString(new File(CONTROL_PATH), true).equals("1");
     }
 
     public static boolean setEnabled(boolean state) {

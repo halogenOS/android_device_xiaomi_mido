@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2017 The halogenOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +19,7 @@ package org.cyanogenmod.hardware;
 
 import org.halogenos.io.FileUtils;
 
+import java.io.File;
 /*
  * Disable capacitive keys
  *
@@ -36,7 +38,7 @@ public class KeyDisabler {
     }
 
     public static boolean isActive() {
-        return FileUtils.readOneLine(CONTROL_PATH).equals("0");
+        return FileUtils.readString(new File(CONTROL_PATH), true).equals("0");
     }
 
     public static boolean setActive(boolean state) {
